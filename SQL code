@@ -1,0 +1,23 @@
+/* sql example code */
+
+create table food_journal (
+    id INTEGER PRIMARY KEY,
+    user TEXT,
+    date TEXT,
+    food TEXT,
+    description_of_food TEXT
+    );
+
+INSERT INTO food_journal (user, date, food, description_of_food) VALUES ("Jimmy McJimbob", "4/15/2024", "Banana Smoothie", "Today I had a banana smoothie. It was very good.");
+
+INSERT INTO food_journal (user, date, food, description_of_food) VALUES ("Charles Barkley", "4/16/2024", "Basketball", "I ate a basketball, it didn't taste very good. I feel sick. Please add a feelings collumn because I would like to put Sad in it.");
+
+INSERT INTO food_journal (user, date, food, description_of_food) VALUES ("Barack Obamaa", "4/17/2024", "Uh, Hello.", "What does this app do? I don't know what I'm supposed to put here.");
+
+INSERT INTO food_journal (user, date, food, description_of_food) VALUES ("Dillon Mork", "4/18/2024", "Fried Egg Sandwich", "I had a fried egg sandwich today. Also, have you seen the President around here? I thought I saw him.");
+
+UPDATE food_journal SET description_of_food = "Edit- Actually, I didn't like my banana smoothie." WHERE id = 1;
+
+delete from food_journal WHERE id = 1;
+
+SELECT * FROM food_journal
